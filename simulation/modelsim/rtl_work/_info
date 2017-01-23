@@ -10,15 +10,15 @@ cModel Technology
 Z0 dE:/altera/15.0/practice_stuff/reaction_game/simulation/modelsim
 vREACTION_GAME
 Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z2 !s110 1485205759
+Z2 !s110 1485214003
 !i10b 1
-!s100 ]L4OL^5MC83d?BS9^n0K10
-I=hRBbL=l8SYH88bGaP]Ea0
+!s100 QblHC9fU:8bhB^G9OIe=U1
+I5oil]FaB@hn<H:R;2c8bP0
 Z3 V`JN@9S9cnhjKRR_L]QIcM3
 !s105 REACTION_GAME_sv_unit
 S1
 R0
-w1485204919
+w1485213786
 8E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv
 FE:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv
 L0 14
@@ -26,13 +26,38 @@ Z4 OV;L;10.3d;59
 r1
 !s85 0
 31
-!s108 1485205759.179000
+!s108 1485214003.488000
 !s107 E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+E:/altera/15.0/practice_stuff/reaction_game|E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv|
 !i113 1
 Z5 o-sv -work work
 Z6 !s92 -sv -work work +incdir+E:/altera/15.0/practice_stuff/reaction_game
 n@r@e@a@c@t@i@o@n_@g@a@m@e
+vREACTION_GAME_DIGIT2HEX
+R1
+R2
+!i10b 1
+!s100 iZV@CaQnRT5=GnB^BPfnE0
+Ij6z[P4ADORMfiKcEne5UZ1
+R3
+!s105 REACTION_GAME_DIGIT2HEX_sv_unit
+S1
+R0
+w1485213460
+8E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_DIGIT2HEX.sv
+FE:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_DIGIT2HEX.sv
+L0 17
+R4
+r1
+!s85 0
+31
+!s108 1485214003.911000
+!s107 E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_DIGIT2HEX.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/altera/15.0/practice_stuff/reaction_game|E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_DIGIT2HEX.sv|
+!i113 1
+R5
+R6
+n@r@e@a@c@t@i@o@n_@g@a@m@e_@d@i@g@i@t2@h@e@x
 vREACTION_GAME_MCOUNTER
 R1
 R2
@@ -51,7 +76,7 @@ R4
 r1
 !s85 0
 31
-!s108 1485205759.248000
+!s108 1485214003.425000
 !s107 E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+E:/altera/15.0/practice_stuff/reaction_game|E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv|
 !i113 1

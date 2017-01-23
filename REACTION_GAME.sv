@@ -149,16 +149,20 @@ module REACTION_GAME(
 logic reset;
 logic clk;
 
-logic       usecMax;
-logic       msecMax;
-logic       secMax;
+logic       usecMax; // 1000 ns reached
+logic       msecMax; // 1000 us reached
+logic       secMax;  // 1000 ms reached
 
-logic [9:0] msec;
-logic [9:0] sec;
+logic [9:0] msec; // how many miliseconds have passed
+logic [9:0] sec; // how many seconds have passed
 
 assign clk = CLOCK_50_B5B; // 50 MHz clock
 assign reset = ~SW[0]; // reset button
 
+//-----------------------------------------------------------------------------------
+// Timers:
+// These timers keep track of seconds and milliseconds when en is driven high
+//-----------------------------------------------------------------------------------
 REACTION_GAME_MCOUNTER #(6'd50,3'd6) nsecCounter(
 .reset(reset),
 .clk(clk),
@@ -186,7 +190,7 @@ REACTION_GAME_MCOUNTER msecCounter(
 .max(secMax)
 );
 
-REACTION_GAME_MCOUNTER #(1'd1,1'd1) secCounter(
+REACTION_GAME_MCOUNTER #(4'd10,3'd4) secCounter(
 .reset(reset),
 .clk(clk),
 .en(secMax),
@@ -195,14 +199,50 @@ REACTION_GAME_MCOUNTER #(1'd1,1'd1) secCounter(
 .max()
 );
 
+//-----------------------------------------------------------------------------------
+// State Machine
+//-----------------------------------------------------------------------------------
+
+
+//-----------------------------------------------------------------------------------
+// Digit to Hex Display Converters
+//-----------------------------------------------------------------------------------
+
+// milliseconds
+REACTION_GAME_DIGIT2HEX d2h0 (
+.digit(4'd1),
+.en(0),
+.hex(HEX0)
+);
+
+// Centiseconds
+REACTION_GAME_DIGIT2HEX d2h1 (
+.digit(4'd10),
+.en(1),
+.hex(HEX1)
+);
+
+// Deciseconds
+REACTION_GAME_DIGIT2HEX d2h2 (
+.digit(4'd12),
+.en(1),
+.hex(HEX2)
+);
+
+// Seconds
+REACTION_GAME_DIGIT2HEX d2h3 (
+.digit(4'd1),
+.en(1),
+.hex(HEX3)
+);
+
 
 
 always @(posedge clk) begin
 	if(reset) begin
-
+		
 	end else begin
 
-		end
 	end
 end
 
