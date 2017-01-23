@@ -155,7 +155,6 @@ logic       secMax;
 
 logic [9:0] msec;
 logic [9:0] sec;
-logic       maxed;
 
 assign clk = CLOCK_50_B5B; // 50 MHz clock
 assign reset = ~SW[0]; // reset button
@@ -187,25 +186,22 @@ REACTION_GAME_MCOUNTER msecCounter(
 .max(secMax)
 );
 
-REACTION_GAME_MCOUNTER #(4'd8,3'd4) secCounter(
+REACTION_GAME_MCOUNTER #(1'd1,1'd1) secCounter(
 .reset(reset),
 .clk(clk),
 .en(secMax),
 
 .count(sec),
-.max(maxed)
+.max()
 );
 
 
 
 always @(posedge clk) begin
-	if(msecMax) begin
-		LEDG <= 1;
+	if(reset) begin
+
 	end else begin
-		if(maxed) begin
-			LEDG <= LEDG << 1;
-		end else begin
-			LEDG <= LEDG;
+
 		end
 	end
 end

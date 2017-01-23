@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for REACTION_GAME
-Mon Jan 23 17:01:43 2017
+Mon Jan 23 17:13:14 2017
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -129,7 +129,7 @@ agreement for further details.
 +-----------------------+--------+--------------------------+
 ; SDC File Path         ; Status ; Read at                  ;
 +-----------------------+--------+--------------------------+
-; REACTION_GAME.out.sdc ; OK     ; Mon Jan 23 17:01:33 2017 ;
+; REACTION_GAME.out.sdc ; OK     ; Mon Jan 23 17:13:05 2017 ;
 +-----------------------+--------+--------------------------+
 
 
@@ -147,7 +147,7 @@ agreement for further details.
 +------------+-----------------+--------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name   ; Note ;
 +------------+-----------------+--------------+------+
-; 348.55 MHz ; 348.55 MHz      ; CLOCK_50_B5B ;      ;
+; 338.07 MHz ; 338.07 MHz      ; CLOCK_50_B5B ;      ;
 +------------+-----------------+--------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -163,7 +163,7 @@ HTML report is unavailable in plain text report export.
 +--------------+--------+---------------+
 ; Clock        ; Slack  ; End Point TNS ;
 +--------------+--------+---------------+
-; CLOCK_50_B5B ; 17.131 ; 0.000         ;
+; CLOCK_50_B5B ; 17.042 ; 0.000         ;
 +--------------+--------+---------------+
 
 
@@ -172,7 +172,7 @@ HTML report is unavailable in plain text report export.
 +--------------+-------+---------------+
 ; Clock        ; Slack ; End Point TNS ;
 +--------------+-------+---------------+
-; CLOCK_50_B5B ; 0.252 ; 0.000         ;
+; CLOCK_50_B5B ; 0.402 ; 0.000         ;
 +--------------+-------+---------------+
 
 
@@ -202,8 +202,8 @@ No paths to report.
 +-----------+--------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+--------------+-------+-------+------------+-----------------+
-; SW[*]     ; CLOCK_50_B5B ; 3.508 ; 4.363 ; Rise       ; CLOCK_50_B5B    ;
-;  SW[0]    ; CLOCK_50_B5B ; 3.508 ; 4.363 ; Rise       ; CLOCK_50_B5B    ;
+; SW[*]     ; CLOCK_50_B5B ; 3.283 ; 4.064 ; Rise       ; CLOCK_50_B5B    ;
+;  SW[0]    ; CLOCK_50_B5B ; 3.283 ; 4.064 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+-------+-------+------------+-----------------+
 
 
@@ -212,8 +212,8 @@ No paths to report.
 +-----------+--------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+--------------+--------+--------+------------+-----------------+
-; SW[*]     ; CLOCK_50_B5B ; -0.957 ; -1.626 ; Rise       ; CLOCK_50_B5B    ;
-;  SW[0]    ; CLOCK_50_B5B ; -0.957 ; -1.626 ; Rise       ; CLOCK_50_B5B    ;
+; SW[*]     ; CLOCK_50_B5B ; -0.834 ; -1.445 ; Rise       ; CLOCK_50_B5B    ;
+;  SW[0]    ; CLOCK_50_B5B ; -0.834 ; -1.445 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+--------+--------+------------+-----------------+
 
 
@@ -222,15 +222,15 @@ No paths to report.
 +-----------+--------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+--------------+--------+--------+------------+-----------------+
-; LEDG[*]   ; CLOCK_50_B5B ; 11.030 ; 11.219 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[0]  ; CLOCK_50_B5B ; 10.144 ; 10.196 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[1]  ; CLOCK_50_B5B ; 10.116 ; 10.150 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[2]  ; CLOCK_50_B5B ; 10.197 ; 10.265 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[3]  ; CLOCK_50_B5B ; 8.697  ; 8.795  ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[4]  ; CLOCK_50_B5B ; 10.713 ; 10.834 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[5]  ; CLOCK_50_B5B ; 11.030 ; 11.219 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[6]  ; CLOCK_50_B5B ; 10.755 ; 11.006 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[7]  ; CLOCK_50_B5B ; 10.761 ; 10.967 ; Rise       ; CLOCK_50_B5B    ;
+; LEDG[*]   ; CLOCK_50_B5B ; 10.879 ; 11.229 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[0]  ; CLOCK_50_B5B ; 10.509 ; 10.707 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[1]  ; CLOCK_50_B5B ; 10.346 ; 10.429 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[2]  ; CLOCK_50_B5B ; 10.487 ; 10.596 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[3]  ; CLOCK_50_B5B ; 8.972  ; 9.093  ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[4]  ; CLOCK_50_B5B ; 10.879 ; 11.229 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[5]  ; CLOCK_50_B5B ; 10.845 ; 11.190 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[6]  ; CLOCK_50_B5B ; 10.703 ; 10.879 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[7]  ; CLOCK_50_B5B ; 10.572 ; 10.723 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+--------+--------+------------+-----------------+
 
 
@@ -239,15 +239,15 @@ No paths to report.
 +-----------+--------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+--------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; CLOCK_50_B5B ; 8.083 ; 8.162 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[0]  ; CLOCK_50_B5B ; 8.252 ; 8.304 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[1]  ; CLOCK_50_B5B ; 8.209 ; 8.244 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[2]  ; CLOCK_50_B5B ; 8.285 ; 8.348 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[3]  ; CLOCK_50_B5B ; 8.083 ; 8.162 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[4]  ; CLOCK_50_B5B ; 8.752 ; 8.841 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[5]  ; CLOCK_50_B5B ; 9.010 ; 9.127 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[6]  ; CLOCK_50_B5B ; 8.763 ; 8.930 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[7]  ; CLOCK_50_B5B ; 8.768 ; 8.898 ; Rise       ; CLOCK_50_B5B    ;
+; LEDG[*]   ; CLOCK_50_B5B ; 8.323 ; 8.403 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[0]  ; CLOCK_50_B5B ; 8.563 ; 8.717 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[1]  ; CLOCK_50_B5B ; 8.404 ; 8.465 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[2]  ; CLOCK_50_B5B ; 8.535 ; 8.619 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[3]  ; CLOCK_50_B5B ; 8.323 ; 8.403 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[4]  ; CLOCK_50_B5B ; 8.863 ; 9.097 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[5]  ; CLOCK_50_B5B ; 8.827 ; 9.054 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[6]  ; CLOCK_50_B5B ; 8.729 ; 8.857 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[7]  ; CLOCK_50_B5B ; 8.597 ; 8.696 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+-------+-------+------------+-----------------+
 
 
@@ -257,13 +257,13 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                  ;
-+------------+-----------------+--------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name   ; Note ;
-+------------+-----------------+--------------+------+
-; 358.68 MHz ; 358.68 MHz      ; CLOCK_50_B5B ;      ;
-+------------+-----------------+--------------+------+
++---------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                 ;
++-----------+-----------------+--------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name   ; Note ;
++-----------+-----------------+--------------+------+
+; 335.8 MHz ; 335.8 MHz       ; CLOCK_50_B5B ;      ;
++-----------+-----------------+--------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -272,7 +272,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------+--------+---------------+
 ; Clock        ; Slack  ; End Point TNS ;
 +--------------+--------+---------------+
-; CLOCK_50_B5B ; 17.212 ; 0.000         ;
+; CLOCK_50_B5B ; 17.022 ; 0.000         ;
 +--------------+--------+---------------+
 
 
@@ -281,7 +281,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------+-------+---------------+
 ; Clock        ; Slack ; End Point TNS ;
 +--------------+-------+---------------+
-; CLOCK_50_B5B ; 0.233 ; 0.000         ;
+; CLOCK_50_B5B ; 0.387 ; 0.000         ;
 +--------------+-------+---------------+
 
 
@@ -302,7 +302,7 @@ No paths to report.
 +--------------+-------+---------------------------+
 ; Clock        ; Slack ; End Point TNS             ;
 +--------------+-------+---------------------------+
-; CLOCK_50_B5B ; 9.347 ; 0.000                     ;
+; CLOCK_50_B5B ; 9.345 ; 0.000                     ;
 +--------------+-------+---------------------------+
 
 
@@ -311,8 +311,8 @@ No paths to report.
 +-----------+--------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+--------------+-------+-------+------------+-----------------+
-; SW[*]     ; CLOCK_50_B5B ; 3.336 ; 4.222 ; Rise       ; CLOCK_50_B5B    ;
-;  SW[0]    ; CLOCK_50_B5B ; 3.336 ; 4.222 ; Rise       ; CLOCK_50_B5B    ;
+; SW[*]     ; CLOCK_50_B5B ; 3.090 ; 3.907 ; Rise       ; CLOCK_50_B5B    ;
+;  SW[0]    ; CLOCK_50_B5B ; 3.090 ; 3.907 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+-------+-------+------------+-----------------+
 
 
@@ -321,8 +321,8 @@ No paths to report.
 +-----------+--------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+--------------+--------+--------+------------+-----------------+
-; SW[*]     ; CLOCK_50_B5B ; -0.742 ; -1.443 ; Rise       ; CLOCK_50_B5B    ;
-;  SW[0]    ; CLOCK_50_B5B ; -0.742 ; -1.443 ; Rise       ; CLOCK_50_B5B    ;
+; SW[*]     ; CLOCK_50_B5B ; -0.602 ; -1.247 ; Rise       ; CLOCK_50_B5B    ;
+;  SW[0]    ; CLOCK_50_B5B ; -0.602 ; -1.247 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+--------+--------+------------+-----------------+
 
 
@@ -331,15 +331,15 @@ No paths to report.
 +-----------+--------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+--------------+--------+--------+------------+-----------------+
-; LEDG[*]   ; CLOCK_50_B5B ; 10.890 ; 11.107 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[0]  ; CLOCK_50_B5B ; 10.063 ; 10.110 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[1]  ; CLOCK_50_B5B ; 10.027 ; 10.067 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[2]  ; CLOCK_50_B5B ; 10.089 ; 10.182 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[3]  ; CLOCK_50_B5B ; 8.585  ; 8.718  ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[4]  ; CLOCK_50_B5B ; 10.566 ; 10.730 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[5]  ; CLOCK_50_B5B ; 10.890 ; 11.107 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[6]  ; CLOCK_50_B5B ; 10.616 ; 10.872 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[7]  ; CLOCK_50_B5B ; 10.622 ; 10.844 ; Rise       ; CLOCK_50_B5B    ;
+; LEDG[*]   ; CLOCK_50_B5B ; 10.758 ; 11.107 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[0]  ; CLOCK_50_B5B ; 10.406 ; 10.593 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[1]  ; CLOCK_50_B5B ; 10.248 ; 10.333 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[2]  ; CLOCK_50_B5B ; 10.375 ; 10.514 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[3]  ; CLOCK_50_B5B ; 8.856  ; 9.001  ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[4]  ; CLOCK_50_B5B ; 10.758 ; 11.107 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[5]  ; CLOCK_50_B5B ; 10.717 ; 11.067 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[6]  ; CLOCK_50_B5B ; 10.592 ; 10.763 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[7]  ; CLOCK_50_B5B ; 10.458 ; 10.605 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+--------+--------+------------+-----------------+
 
 
@@ -348,15 +348,15 @@ No paths to report.
 +-----------+--------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+--------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; CLOCK_50_B5B ; 7.994 ; 8.113 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[0]  ; CLOCK_50_B5B ; 8.201 ; 8.250 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[1]  ; CLOCK_50_B5B ; 8.154 ; 8.196 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[2]  ; CLOCK_50_B5B ; 8.210 ; 8.302 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[3]  ; CLOCK_50_B5B ; 7.994 ; 8.113 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[4]  ; CLOCK_50_B5B ; 8.639 ; 8.780 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[5]  ; CLOCK_50_B5B ; 8.907 ; 9.066 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[6]  ; CLOCK_50_B5B ; 8.660 ; 8.855 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[7]  ; CLOCK_50_B5B ; 8.663 ; 8.830 ; Rise       ; CLOCK_50_B5B    ;
+; LEDG[*]   ; CLOCK_50_B5B ; 8.226 ; 8.346 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[0]  ; CLOCK_50_B5B ; 8.487 ; 8.642 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[1]  ; CLOCK_50_B5B ; 8.336 ; 8.409 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[2]  ; CLOCK_50_B5B ; 8.460 ; 8.578 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[3]  ; CLOCK_50_B5B ; 8.226 ; 8.346 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[4]  ; CLOCK_50_B5B ; 8.779 ; 9.027 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[5]  ; CLOCK_50_B5B ; 8.737 ; 8.983 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[6]  ; CLOCK_50_B5B ; 8.648 ; 8.787 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[7]  ; CLOCK_50_B5B ; 8.515 ; 8.628 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+-------+-------+------------+-----------------+
 
 
@@ -371,7 +371,7 @@ No synchronizer chains to report.
 +--------------+--------+---------------+
 ; Clock        ; Slack  ; End Point TNS ;
 +--------------+--------+---------------+
-; CLOCK_50_B5B ; 18.697 ; 0.000         ;
+; CLOCK_50_B5B ; 18.689 ; 0.000         ;
 +--------------+--------+---------------+
 
 
@@ -380,7 +380,7 @@ No synchronizer chains to report.
 +--------------+-------+---------------+
 ; Clock        ; Slack ; End Point TNS ;
 +--------------+-------+---------------+
-; CLOCK_50_B5B ; 0.136 ; 0.000         ;
+; CLOCK_50_B5B ; 0.181 ; 0.000         ;
 +--------------+-------+---------------+
 
 
@@ -401,7 +401,7 @@ No paths to report.
 +--------------+-------+----------------------------+
 ; Clock        ; Slack ; End Point TNS              ;
 +--------------+-------+----------------------------+
-; CLOCK_50_B5B ; 9.126 ; 0.000                      ;
+; CLOCK_50_B5B ; 9.125 ; 0.000                      ;
 +--------------+-------+----------------------------+
 
 
@@ -410,8 +410,8 @@ No paths to report.
 +-----------+--------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+--------------+-------+-------+------------+-----------------+
-; SW[*]     ; CLOCK_50_B5B ; 2.048 ; 2.634 ; Rise       ; CLOCK_50_B5B    ;
-;  SW[0]    ; CLOCK_50_B5B ; 2.048 ; 2.634 ; Rise       ; CLOCK_50_B5B    ;
+; SW[*]     ; CLOCK_50_B5B ; 1.865 ; 2.391 ; Rise       ; CLOCK_50_B5B    ;
+;  SW[0]    ; CLOCK_50_B5B ; 1.865 ; 2.391 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+-------+-------+------------+-----------------+
 
 
@@ -420,8 +420,8 @@ No paths to report.
 +-----------+--------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+--------------+--------+--------+------------+-----------------+
-; SW[*]     ; CLOCK_50_B5B ; -0.895 ; -1.402 ; Rise       ; CLOCK_50_B5B    ;
-;  SW[0]    ; CLOCK_50_B5B ; -0.895 ; -1.402 ; Rise       ; CLOCK_50_B5B    ;
+; SW[*]     ; CLOCK_50_B5B ; -0.800 ; -1.262 ; Rise       ; CLOCK_50_B5B    ;
+;  SW[0]    ; CLOCK_50_B5B ; -0.800 ; -1.262 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+--------+--------+------------+-----------------+
 
 
@@ -430,15 +430,15 @@ No paths to report.
 +-----------+--------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+--------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; CLOCK_50_B5B ; 5.604 ; 5.823 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[0]  ; CLOCK_50_B5B ; 5.045 ; 5.173 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[1]  ; CLOCK_50_B5B ; 5.034 ; 5.136 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[2]  ; CLOCK_50_B5B ; 5.029 ; 5.164 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[3]  ; CLOCK_50_B5B ; 4.375 ; 4.534 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[4]  ; CLOCK_50_B5B ; 5.314 ; 5.516 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[5]  ; CLOCK_50_B5B ; 5.604 ; 5.823 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[6]  ; CLOCK_50_B5B ; 5.409 ; 5.718 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[7]  ; CLOCK_50_B5B ; 5.425 ; 5.683 ; Rise       ; CLOCK_50_B5B    ;
+; LEDG[*]   ; CLOCK_50_B5B ; 5.473 ; 5.823 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[0]  ; CLOCK_50_B5B ; 5.241 ; 5.489 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[1]  ; CLOCK_50_B5B ; 5.166 ; 5.308 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[2]  ; CLOCK_50_B5B ; 5.202 ; 5.379 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[3]  ; CLOCK_50_B5B ; 4.527 ; 4.716 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[4]  ; CLOCK_50_B5B ; 5.473 ; 5.823 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[5]  ; CLOCK_50_B5B ; 5.470 ; 5.816 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[6]  ; CLOCK_50_B5B ; 5.352 ; 5.589 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[7]  ; CLOCK_50_B5B ; 5.302 ; 5.508 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+-------+-------+------------+-----------------+
 
 
@@ -447,15 +447,15 @@ No paths to report.
 +-----------+--------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+--------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; CLOCK_50_B5B ; 4.145 ; 4.291 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[0]  ; CLOCK_50_B5B ; 4.241 ; 4.367 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[1]  ; CLOCK_50_B5B ; 4.226 ; 4.326 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[2]  ; CLOCK_50_B5B ; 4.217 ; 4.348 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[3]  ; CLOCK_50_B5B ; 4.145 ; 4.291 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[4]  ; CLOCK_50_B5B ; 4.477 ; 4.661 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[5]  ; CLOCK_50_B5B ; 4.719 ; 4.895 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[6]  ; CLOCK_50_B5B ; 4.551 ; 4.796 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[7]  ; CLOCK_50_B5B ; 4.566 ; 4.765 ; Rise       ; CLOCK_50_B5B    ;
+; LEDG[*]   ; CLOCK_50_B5B ; 4.277 ; 4.436 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[0]  ; CLOCK_50_B5B ; 4.405 ; 4.622 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[1]  ; CLOCK_50_B5B ; 4.335 ; 4.462 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[2]  ; CLOCK_50_B5B ; 4.367 ; 4.525 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[3]  ; CLOCK_50_B5B ; 4.277 ; 4.436 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[4]  ; CLOCK_50_B5B ; 4.595 ; 4.869 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[5]  ; CLOCK_50_B5B ; 4.591 ; 4.858 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[6]  ; CLOCK_50_B5B ; 4.504 ; 4.712 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[7]  ; CLOCK_50_B5B ; 4.453 ; 4.619 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+-------+-------+------------+-----------------+
 
 
@@ -470,7 +470,7 @@ No synchronizer chains to report.
 +--------------+--------+---------------+
 ; Clock        ; Slack  ; End Point TNS ;
 +--------------+--------+---------------+
-; CLOCK_50_B5B ; 18.801 ; 0.000         ;
+; CLOCK_50_B5B ; 18.774 ; 0.000         ;
 +--------------+--------+---------------+
 
 
@@ -479,7 +479,7 @@ No synchronizer chains to report.
 +--------------+-------+---------------+
 ; Clock        ; Slack ; End Point TNS ;
 +--------------+-------+---------------+
-; CLOCK_50_B5B ; 0.122 ; 0.000         ;
+; CLOCK_50_B5B ; 0.171 ; 0.000         ;
 +--------------+-------+---------------+
 
 
@@ -500,7 +500,7 @@ No paths to report.
 +--------------+-------+---------------------------+
 ; Clock        ; Slack ; End Point TNS             ;
 +--------------+-------+---------------------------+
-; CLOCK_50_B5B ; 9.086 ; 0.000                     ;
+; CLOCK_50_B5B ; 9.087 ; 0.000                     ;
 +--------------+-------+---------------------------+
 
 
@@ -509,8 +509,8 @@ No paths to report.
 +-----------+--------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+--------------+-------+-------+------------+-----------------+
-; SW[*]     ; CLOCK_50_B5B ; 1.845 ; 2.358 ; Rise       ; CLOCK_50_B5B    ;
-;  SW[0]    ; CLOCK_50_B5B ; 1.845 ; 2.358 ; Rise       ; CLOCK_50_B5B    ;
+; SW[*]     ; CLOCK_50_B5B ; 1.676 ; 2.147 ; Rise       ; CLOCK_50_B5B    ;
+;  SW[0]    ; CLOCK_50_B5B ; 1.676 ; 2.147 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+-------+-------+------------+-----------------+
 
 
@@ -519,8 +519,8 @@ No paths to report.
 +-----------+--------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+--------------+--------+--------+------------+-----------------+
-; SW[*]     ; CLOCK_50_B5B ; -0.769 ; -1.186 ; Rise       ; CLOCK_50_B5B    ;
-;  SW[0]    ; CLOCK_50_B5B ; -0.769 ; -1.186 ; Rise       ; CLOCK_50_B5B    ;
+; SW[*]     ; CLOCK_50_B5B ; -0.683 ; -1.068 ; Rise       ; CLOCK_50_B5B    ;
+;  SW[0]    ; CLOCK_50_B5B ; -0.683 ; -1.068 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+--------+--------+------------+-----------------+
 
 
@@ -529,15 +529,15 @@ No paths to report.
 +-----------+--------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+--------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; CLOCK_50_B5B ; 5.309 ; 5.475 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[0]  ; CLOCK_50_B5B ; 4.801 ; 4.904 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[1]  ; CLOCK_50_B5B ; 4.793 ; 4.866 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[2]  ; CLOCK_50_B5B ; 4.816 ; 4.900 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[3]  ; CLOCK_50_B5B ; 4.140 ; 4.250 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[4]  ; CLOCK_50_B5B ; 5.064 ; 5.216 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[5]  ; CLOCK_50_B5B ; 5.309 ; 5.475 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[6]  ; CLOCK_50_B5B ; 5.121 ; 5.368 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[7]  ; CLOCK_50_B5B ; 5.140 ; 5.336 ; Rise       ; CLOCK_50_B5B    ;
+; LEDG[*]   ; CLOCK_50_B5B ; 5.222 ; 5.474 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[0]  ; CLOCK_50_B5B ; 4.980 ; 5.180 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[1]  ; CLOCK_50_B5B ; 4.915 ; 5.020 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[2]  ; CLOCK_50_B5B ; 4.974 ; 5.090 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[3]  ; CLOCK_50_B5B ; 4.280 ; 4.408 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[4]  ; CLOCK_50_B5B ; 5.222 ; 5.474 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[5]  ; CLOCK_50_B5B ; 5.204 ; 5.457 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[6]  ; CLOCK_50_B5B ; 5.068 ; 5.268 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[7]  ; CLOCK_50_B5B ; 5.037 ; 5.189 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+-------+-------+------------+-----------------+
 
 
@@ -546,15 +546,15 @@ No paths to report.
 +-----------+--------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+--------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; CLOCK_50_B5B ; 3.919 ; 4.019 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[0]  ; CLOCK_50_B5B ; 4.003 ; 4.104 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[1]  ; CLOCK_50_B5B ; 3.992 ; 4.063 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[2]  ; CLOCK_50_B5B ; 4.012 ; 4.092 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[3]  ; CLOCK_50_B5B ; 3.919 ; 4.019 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[4]  ; CLOCK_50_B5B ; 4.239 ; 4.377 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[5]  ; CLOCK_50_B5B ; 4.441 ; 4.572 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[6]  ; CLOCK_50_B5B ; 4.275 ; 4.485 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[7]  ; CLOCK_50_B5B ; 4.293 ; 4.455 ; Rise       ; CLOCK_50_B5B    ;
+; LEDG[*]   ; CLOCK_50_B5B ; 4.041 ; 4.151 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[0]  ; CLOCK_50_B5B ; 4.154 ; 4.333 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[1]  ; CLOCK_50_B5B ; 4.094 ; 4.189 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[2]  ; CLOCK_50_B5B ; 4.148 ; 4.249 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[3]  ; CLOCK_50_B5B ; 4.041 ; 4.151 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[4]  ; CLOCK_50_B5B ; 4.359 ; 4.551 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[5]  ; CLOCK_50_B5B ; 4.340 ; 4.530 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[6]  ; CLOCK_50_B5B ; 4.233 ; 4.414 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[7]  ; CLOCK_50_B5B ; 4.199 ; 4.329 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+-------+-------+------------+-----------------+
 
 
@@ -569,8 +569,8 @@ No synchronizer chains to report.
 +------------------+--------+-------+----------+---------+---------------------+
 ; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; 17.131 ; 0.122 ; N/A      ; N/A     ; 9.086               ;
-;  CLOCK_50_B5B    ; 17.131 ; 0.122 ; N/A      ; N/A     ; 9.086               ;
+; Worst-case Slack ; 17.022 ; 0.171 ; N/A      ; N/A     ; 9.087               ;
+;  CLOCK_50_B5B    ; 17.022 ; 0.171 ; N/A      ; N/A     ; 9.087               ;
 ; Design-wide TNS  ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  CLOCK_50_B5B    ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
 +------------------+--------+-------+----------+---------+---------------------+
@@ -581,8 +581,8 @@ No synchronizer chains to report.
 +-----------+--------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+--------------+-------+-------+------------+-----------------+
-; SW[*]     ; CLOCK_50_B5B ; 3.508 ; 4.363 ; Rise       ; CLOCK_50_B5B    ;
-;  SW[0]    ; CLOCK_50_B5B ; 3.508 ; 4.363 ; Rise       ; CLOCK_50_B5B    ;
+; SW[*]     ; CLOCK_50_B5B ; 3.283 ; 4.064 ; Rise       ; CLOCK_50_B5B    ;
+;  SW[0]    ; CLOCK_50_B5B ; 3.283 ; 4.064 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+-------+-------+------------+-----------------+
 
 
@@ -591,8 +591,8 @@ No synchronizer chains to report.
 +-----------+--------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+--------------+--------+--------+------------+-----------------+
-; SW[*]     ; CLOCK_50_B5B ; -0.742 ; -1.186 ; Rise       ; CLOCK_50_B5B    ;
-;  SW[0]    ; CLOCK_50_B5B ; -0.742 ; -1.186 ; Rise       ; CLOCK_50_B5B    ;
+; SW[*]     ; CLOCK_50_B5B ; -0.602 ; -1.068 ; Rise       ; CLOCK_50_B5B    ;
+;  SW[0]    ; CLOCK_50_B5B ; -0.602 ; -1.068 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+--------+--------+------------+-----------------+
 
 
@@ -601,15 +601,15 @@ No synchronizer chains to report.
 +-----------+--------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+--------------+--------+--------+------------+-----------------+
-; LEDG[*]   ; CLOCK_50_B5B ; 11.030 ; 11.219 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[0]  ; CLOCK_50_B5B ; 10.144 ; 10.196 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[1]  ; CLOCK_50_B5B ; 10.116 ; 10.150 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[2]  ; CLOCK_50_B5B ; 10.197 ; 10.265 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[3]  ; CLOCK_50_B5B ; 8.697  ; 8.795  ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[4]  ; CLOCK_50_B5B ; 10.713 ; 10.834 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[5]  ; CLOCK_50_B5B ; 11.030 ; 11.219 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[6]  ; CLOCK_50_B5B ; 10.755 ; 11.006 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[7]  ; CLOCK_50_B5B ; 10.761 ; 10.967 ; Rise       ; CLOCK_50_B5B    ;
+; LEDG[*]   ; CLOCK_50_B5B ; 10.879 ; 11.229 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[0]  ; CLOCK_50_B5B ; 10.509 ; 10.707 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[1]  ; CLOCK_50_B5B ; 10.346 ; 10.429 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[2]  ; CLOCK_50_B5B ; 10.487 ; 10.596 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[3]  ; CLOCK_50_B5B ; 8.972  ; 9.093  ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[4]  ; CLOCK_50_B5B ; 10.879 ; 11.229 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[5]  ; CLOCK_50_B5B ; 10.845 ; 11.190 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[6]  ; CLOCK_50_B5B ; 10.703 ; 10.879 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[7]  ; CLOCK_50_B5B ; 10.572 ; 10.723 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+--------+--------+------------+-----------------+
 
 
@@ -618,15 +618,15 @@ No synchronizer chains to report.
 +-----------+--------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port   ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+--------------+-------+-------+------------+-----------------+
-; LEDG[*]   ; CLOCK_50_B5B ; 3.919 ; 4.019 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[0]  ; CLOCK_50_B5B ; 4.003 ; 4.104 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[1]  ; CLOCK_50_B5B ; 3.992 ; 4.063 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[2]  ; CLOCK_50_B5B ; 4.012 ; 4.092 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[3]  ; CLOCK_50_B5B ; 3.919 ; 4.019 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[4]  ; CLOCK_50_B5B ; 4.239 ; 4.377 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[5]  ; CLOCK_50_B5B ; 4.441 ; 4.572 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[6]  ; CLOCK_50_B5B ; 4.275 ; 4.485 ; Rise       ; CLOCK_50_B5B    ;
-;  LEDG[7]  ; CLOCK_50_B5B ; 4.293 ; 4.455 ; Rise       ; CLOCK_50_B5B    ;
+; LEDG[*]   ; CLOCK_50_B5B ; 4.041 ; 4.151 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[0]  ; CLOCK_50_B5B ; 4.154 ; 4.333 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[1]  ; CLOCK_50_B5B ; 4.094 ; 4.189 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[2]  ; CLOCK_50_B5B ; 4.148 ; 4.249 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[3]  ; CLOCK_50_B5B ; 4.041 ; 4.151 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[4]  ; CLOCK_50_B5B ; 4.359 ; 4.551 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[5]  ; CLOCK_50_B5B ; 4.340 ; 4.530 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[6]  ; CLOCK_50_B5B ; 4.233 ; 4.414 ; Rise       ; CLOCK_50_B5B    ;
+;  LEDG[7]  ; CLOCK_50_B5B ; 4.199 ; 4.329 ; Rise       ; CLOCK_50_B5B    ;
 +-----------+--------------+-------+-------+------------+-----------------+
 
 
@@ -1845,7 +1845,7 @@ No synchronizer chains to report.
 +--------------+--------------+----------+----------+----------+----------+
 ; From Clock   ; To Clock     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------+--------------+----------+----------+----------+----------+
-; CLOCK_50_B5B ; CLOCK_50_B5B ; 457      ; 0        ; 0        ; 0        ;
+; CLOCK_50_B5B ; CLOCK_50_B5B ; 414      ; 0        ; 0        ; 0        ;
 +--------------+--------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1855,7 +1855,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------+--------------+----------+----------+----------+----------+
 ; From Clock   ; To Clock     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------+--------------+----------+----------+----------+----------+
-; CLOCK_50_B5B ; CLOCK_50_B5B ; 457      ; 0        ; 0        ; 0        ;
+; CLOCK_50_B5B ; CLOCK_50_B5B ; 414      ; 0        ; 0        ; 0        ;
 +--------------+--------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1880,7 +1880,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 33    ; 33   ;
+; Unconstrained Input Port Paths  ; 38    ; 38   ;
 ; Unconstrained Output Ports      ; 8     ; 8    ;
 ; Unconstrained Output Port Paths ; 8     ; 8    ;
 +---------------------------------+-------+------+
@@ -1892,7 +1892,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Mon Jan 23 17:01:30 2017
+    Info: Processing started: Mon Jan 23 17:13:02 2017
 Info: Command: quartus_sta reaction_game -c REACTION_GAME
 Info: qsta_default_script.tcl version: #11
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1902,14 +1902,14 @@ Info (332104): Reading SDC File: 'REACTION_GAME.out.sdc'
 Info (332152): The following assignments are ignored by the derive_clock_uncertainty command
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
-Info (332146): Worst-case setup slack is 17.131
+Info (332146): Worst-case setup slack is 17.042
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    17.131               0.000 CLOCK_50_B5B 
-Info (332146): Worst-case hold slack is 0.252
+    Info (332119):    17.042               0.000 CLOCK_50_B5B 
+Info (332146): Worst-case hold slack is 0.402
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.252               0.000 CLOCK_50_B5B 
+    Info (332119):     0.402               0.000 CLOCK_50_B5B 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is 9.239
@@ -1920,60 +1920,60 @@ Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332152): The following assignments are ignored by the derive_clock_uncertainty command
-Info (332146): Worst-case setup slack is 17.212
+Info (332146): Worst-case setup slack is 17.022
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    17.212               0.000 CLOCK_50_B5B 
-Info (332146): Worst-case hold slack is 0.233
+    Info (332119):    17.022               0.000 CLOCK_50_B5B 
+Info (332146): Worst-case hold slack is 0.387
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.233               0.000 CLOCK_50_B5B 
+    Info (332119):     0.387               0.000 CLOCK_50_B5B 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 9.347
+Info (332146): Worst-case minimum pulse width slack is 9.345
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     9.347               0.000 CLOCK_50_B5B 
+    Info (332119):     9.345               0.000 CLOCK_50_B5B 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332152): The following assignments are ignored by the derive_clock_uncertainty command
-Info (332146): Worst-case setup slack is 18.697
+Info (332146): Worst-case setup slack is 18.689
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    18.697               0.000 CLOCK_50_B5B 
-Info (332146): Worst-case hold slack is 0.136
+    Info (332119):    18.689               0.000 CLOCK_50_B5B 
+Info (332146): Worst-case hold slack is 0.181
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.136               0.000 CLOCK_50_B5B 
+    Info (332119):     0.181               0.000 CLOCK_50_B5B 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 9.126
+Info (332146): Worst-case minimum pulse width slack is 9.125
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     9.126               0.000 CLOCK_50_B5B 
+    Info (332119):     9.125               0.000 CLOCK_50_B5B 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332152): The following assignments are ignored by the derive_clock_uncertainty command
-Info (332146): Worst-case setup slack is 18.801
+Info (332146): Worst-case setup slack is 18.774
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    18.801               0.000 CLOCK_50_B5B 
-Info (332146): Worst-case hold slack is 0.122
+    Info (332119):    18.774               0.000 CLOCK_50_B5B 
+Info (332146): Worst-case hold slack is 0.171
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.122               0.000 CLOCK_50_B5B 
+    Info (332119):     0.171               0.000 CLOCK_50_B5B 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 9.086
+Info (332146): Worst-case minimum pulse width slack is 9.087
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     9.086               0.000 CLOCK_50_B5B 
+    Info (332119):     9.087               0.000 CLOCK_50_B5B 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 1120 megabytes
-    Info: Processing ended: Mon Jan 23 17:01:43 2017
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 1078 megabytes
+    Info: Processing ended: Mon Jan 23 17:13:14 2017
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:11
 
 
