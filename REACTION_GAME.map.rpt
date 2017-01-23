@@ -1,0 +1,680 @@
+Analysis & Synthesis report for REACTION_GAME
+Mon Jan 23 17:00:41 2017
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: REACTION_GAME_MCOUNTER:nsecCounter
+ 12. Parameter Settings for User Entity Instance: REACTION_GAME_MCOUNTER:usecCounter
+ 13. Parameter Settings for User Entity Instance: REACTION_GAME_MCOUNTER:msecCounter
+ 14. Parameter Settings for User Entity Instance: REACTION_GAME_MCOUNTER:secCounter
+ 15. Port Connectivity Checks: "REACTION_GAME_MCOUNTER:secCounter"
+ 16. Port Connectivity Checks: "REACTION_GAME_MCOUNTER:msecCounter"
+ 17. Port Connectivity Checks: "REACTION_GAME_MCOUNTER:usecCounter"
+ 18. Port Connectivity Checks: "REACTION_GAME_MCOUNTER:nsecCounter"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++---------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Jan 23 17:00:40 2017      ;
+; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
+; Revision Name                   ; REACTION_GAME                              ;
+; Top-level Entity Name           ; REACTION_GAME                              ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; N/A                                        ;
+; Total registers                 ; 41                                         ;
+; Total pins                      ; 236                                        ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0                                          ;
+; Total DSP Blocks                ; 0                                          ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI PMA TX Serializers   ; 0                                          ;
+; Total PLLs                      ; 0                                          ;
+; Total DLLs                      ; 0                                          ;
++---------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC5C6F27C7     ;                    ;
+; Top-level entity name                                                           ; REACTION_GAME      ; REACTION_GAME      ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+; REACTION_GAME_MCOUNTER.sv        ; yes             ; User SystemVerilog HDL File  ; E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv ;         ;
+; REACTION_GAME.sv                 ; yes             ; User SystemVerilog HDL File  ; E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv          ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Estimate of Logic utilization (ALMs needed) ; 27                 ;
+;                                             ;                    ;
+; Combinational ALUT usage for logic          ; 53                 ;
+;     -- 7 input functions                    ; 0                  ;
+;     -- 6 input functions                    ; 1                  ;
+;     -- 5 input functions                    ; 7                  ;
+;     -- 4 input functions                    ; 9                  ;
+;     -- <=3 input functions                  ; 36                 ;
+;                                             ;                    ;
+; Dedicated logic registers                   ; 41                 ;
+;                                             ;                    ;
+; I/O pins                                    ; 236                ;
+;                                             ;                    ;
+; Total DSP Blocks                            ; 0                  ;
+;                                             ;                    ;
+; Maximum fan-out node                        ; CLOCK_50_B5B~input ;
+; Maximum fan-out                             ; 41                 ;
+; Total fan-out                               ; 622                ;
+; Average fan-out                             ; 0.94               ;
++---------------------------------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                  ;
++-----------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------+--------------+
+; Compilation Hierarchy Node              ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Library Name ;
++-----------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------+--------------+
+; |REACTION_GAME                          ; 53 (9)            ; 41 (8)       ; 0                 ; 0          ; 236  ; 0            ; |REACTION_GAME                                    ; work         ;
+;    |REACTION_GAME_MCOUNTER:msecCounter| ; 15 (15)           ; 11 (11)      ; 0                 ; 0          ; 0    ; 0            ; |REACTION_GAME|REACTION_GAME_MCOUNTER:msecCounter ; work         ;
+;    |REACTION_GAME_MCOUNTER:nsecCounter| ; 9 (9)             ; 7 (7)        ; 0                 ; 0          ; 0    ; 0            ; |REACTION_GAME|REACTION_GAME_MCOUNTER:nsecCounter ; work         ;
+;    |REACTION_GAME_MCOUNTER:secCounter|  ; 5 (5)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |REACTION_GAME|REACTION_GAME_MCOUNTER:secCounter  ; work         ;
+;    |REACTION_GAME_MCOUNTER:usecCounter| ; 15 (15)           ; 11 (11)      ; 0                 ; 0          ; 0    ; 0            ; |REACTION_GAME|REACTION_GAME_MCOUNTER:usecCounter ; work         ;
++-----------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++--------------------------------------------+----------------------------------------+
+; Register name                              ; Reason for Removal                     ;
++--------------------------------------------+----------------------------------------+
+; REACTION_GAME_MCOUNTER:secCounter|count[3] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1      ;                                        ;
++--------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 41    ;
+; Number of registers using Synchronous Clear  ; 20    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 30    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |REACTION_GAME|LEDG[1]~reg0                                ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |REACTION_GAME|REACTION_GAME_MCOUNTER:nsecCounter|count[2] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |REACTION_GAME|REACTION_GAME_MCOUNTER:secCounter|count[0]  ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |REACTION_GAME|REACTION_GAME_MCOUNTER:usecCounter|count[1] ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |REACTION_GAME|REACTION_GAME_MCOUNTER:msecCounter|count[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REACTION_GAME_MCOUNTER:nsecCounter ;
++----------------+--------+-------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                  ;
++----------------+--------+-------------------------------------------------------+
+; maxCount       ; 110010 ; Unsigned Binary                                       ;
+; bitWidth       ; 110    ; Unsigned Binary                                       ;
++----------------+--------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REACTION_GAME_MCOUNTER:usecCounter ;
++----------------+------------+---------------------------------------------------+
+; Parameter Name ; Value      ; Type                                              ;
++----------------+------------+---------------------------------------------------+
+; maxCount       ; 1111101000 ; Unsigned Binary                                   ;
+; bitWidth       ; 1010       ; Unsigned Binary                                   ;
++----------------+------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REACTION_GAME_MCOUNTER:msecCounter ;
++----------------+------------+---------------------------------------------------+
+; Parameter Name ; Value      ; Type                                              ;
++----------------+------------+---------------------------------------------------+
+; maxCount       ; 1111101000 ; Unsigned Binary                                   ;
+; bitWidth       ; 1010       ; Unsigned Binary                                   ;
++----------------+------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REACTION_GAME_MCOUNTER:secCounter ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; maxCount       ; 1000  ; Unsigned Binary                                       ;
+; bitWidth       ; 100   ; Unsigned Binary                                       ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "REACTION_GAME_MCOUNTER:secCounter"                                                                                                                                            ;
++-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                                                ;
++-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; count       ; Output ; Warning  ; Output or bidir port (4 bits) is smaller than the port expression (10 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; count[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                    ;
++-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "REACTION_GAME_MCOUNTER:msecCounter"                                                  ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; count ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "REACTION_GAME_MCOUNTER:usecCounter" ;
++-------+--------+----------+------------------------------------+
+; Port  ; Type   ; Severity ; Details                            ;
++-------+--------+----------+------------------------------------+
+; count ; Output ; Info     ; Explicitly unconnected             ;
++-------+--------+----------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "REACTION_GAME_MCOUNTER:nsecCounter"                                                                                                                                                  ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                                                            ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; en     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; en[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; count  ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 41                          ;
+;     ENA               ; 10                          ;
+;     ENA SCLR          ; 20                          ;
+;     plain             ; 11                          ;
+; arriav_io_obuf        ; 97                          ;
+; arriav_lcell_comb     ; 54                          ;
+;     arith             ; 20                          ;
+;         1 data inputs ; 20                          ;
+;     normal            ; 34                          ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 9                           ;
+;         5 data inputs ; 7                           ;
+;         6 data inputs ; 1                           ;
+; boundary_port         ; 236                         ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 0.83                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+    Info: Processing started: Mon Jan 23 17:00:30 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off reaction_game -c REACTION_GAME
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file reaction_game_mcounter.sv
+    Info (12023): Found entity 1: REACTION_GAME_MCOUNTER
+Info (12021): Found 1 design units, including 1 entities, in source file reaction_game.sv
+    Info (12023): Found entity 1: REACTION_GAME
+Info (12127): Elaborating entity "REACTION_GAME" for the top level hierarchy
+Warning (10034): Output port "HEX2" at REACTION_GAME.sv(59) has no driver
+Warning (10034): Output port "HEX3" at REACTION_GAME.sv(62) has no driver
+Warning (10034): Output port "HDMI_TX_D" at REACTION_GAME.sv(69) has no driver
+Warning (10034): Output port "HEX0" at REACTION_GAME.sv(76) has no driver
+Warning (10034): Output port "HEX1" at REACTION_GAME.sv(79) has no driver
+Warning (10034): Output port "HSMC_CLKOUT_n" at REACTION_GAME.sv(87) has no driver
+Warning (10034): Output port "HSMC_CLKOUT_p" at REACTION_GAME.sv(88) has no driver
+Warning (10034): Output port "LEDR" at REACTION_GAME.sv(111) has no driver
+Warning (10034): Output port "SRAM_A" at REACTION_GAME.sv(131) has no driver
+Warning (10034): Output port "ADC_CONVST" at REACTION_GAME.sv(17) has no driver
+Warning (10034): Output port "ADC_SCK" at REACTION_GAME.sv(18) has no driver
+Warning (10034): Output port "ADC_SDI" at REACTION_GAME.sv(19) has no driver
+Warning (10034): Output port "AUD_DACDAT" at REACTION_GAME.sv(26) has no driver
+Warning (10034): Output port "AUD_XCK" at REACTION_GAME.sv(28) has no driver
+Warning (10034): Output port "HDMI_TX_CLK" at REACTION_GAME.sv(68) has no driver
+Warning (10034): Output port "HDMI_TX_DE" at REACTION_GAME.sv(70) has no driver
+Warning (10034): Output port "HDMI_TX_HS" at REACTION_GAME.sv(71) has no driver
+Warning (10034): Output port "HDMI_TX_VS" at REACTION_GAME.sv(73) has no driver
+Warning (10034): Output port "HSMC_CLKOUT0" at REACTION_GAME.sv(86) has no driver
+Warning (10034): Output port "I2C_SCL" at REACTION_GAME.sv(101) has no driver
+Warning (10034): Output port "SD_CLK" at REACTION_GAME.sv(120) has no driver
+Warning (10034): Output port "SRAM_CE_n" at REACTION_GAME.sv(132) has no driver
+Warning (10034): Output port "SRAM_LB_n" at REACTION_GAME.sv(134) has no driver
+Warning (10034): Output port "SRAM_OE_n" at REACTION_GAME.sv(135) has no driver
+Warning (10034): Output port "SRAM_UB_n" at REACTION_GAME.sv(136) has no driver
+Warning (10034): Output port "SRAM_WE_n" at REACTION_GAME.sv(137) has no driver
+Warning (10034): Output port "UART_TX" at REACTION_GAME.sv(147) has no driver
+Info (12128): Elaborating entity "REACTION_GAME_MCOUNTER" for hierarchy "REACTION_GAME_MCOUNTER:nsecCounter"
+Warning (10230): Verilog HDL assignment warning at REACTION_GAME_MCOUNTER.sv(32): truncated value with size 32 to match size of target (6)
+Info (12128): Elaborating entity "REACTION_GAME_MCOUNTER" for hierarchy "REACTION_GAME_MCOUNTER:usecCounter"
+Warning (10230): Verilog HDL assignment warning at REACTION_GAME_MCOUNTER.sv(32): truncated value with size 32 to match size of target (10)
+Info (12128): Elaborating entity "REACTION_GAME_MCOUNTER" for hierarchy "REACTION_GAME_MCOUNTER:secCounter"
+Warning (10230): Verilog HDL assignment warning at REACTION_GAME_MCOUNTER.sv(32): truncated value with size 32 to match size of target (4)
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver
+    Warning (13040): bidirectional pin "AUD_BCLK" has no driver
+    Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver
+    Warning (13040): bidirectional pin "HSMC_D[0]" has no driver
+    Warning (13040): bidirectional pin "HSMC_D[1]" has no driver
+    Warning (13040): bidirectional pin "HSMC_D[2]" has no driver
+    Warning (13040): bidirectional pin "HSMC_D[3]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[0]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[1]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[2]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[3]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[4]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[5]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[6]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[7]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[8]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[9]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[10]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[11]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[12]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[13]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[14]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[15]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_n[16]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[0]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[1]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[2]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[3]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[4]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[5]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[6]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[7]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[8]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[9]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[10]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[11]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[12]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[13]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[14]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[15]" has no driver
+    Warning (13040): bidirectional pin "HSMC_RX_p[16]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[0]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[1]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[2]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[3]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[4]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[5]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[6]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[7]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[8]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[9]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[10]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[11]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[12]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[13]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[14]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[15]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_n[16]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[0]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[1]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[2]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[3]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[4]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[5]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[6]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[7]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[8]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[9]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[10]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[11]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[12]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[13]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[14]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[15]" has no driver
+    Warning (13040): bidirectional pin "HSMC_TX_p[16]" has no driver
+    Warning (13040): bidirectional pin "I2C_SDA" has no driver
+    Warning (13040): bidirectional pin "SD_CMD" has no driver
+    Warning (13040): bidirectional pin "SD_DAT[0]" has no driver
+    Warning (13040): bidirectional pin "SD_DAT[1]" has no driver
+    Warning (13040): bidirectional pin "SD_DAT[2]" has no driver
+    Warning (13040): bidirectional pin "SD_DAT[3]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[0]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[1]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[2]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[3]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[4]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[5]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[6]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[7]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[8]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[9]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[10]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[11]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[12]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[13]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[14]" has no driver
+    Warning (13040): bidirectional pin "SRAM_D[15]" has no driver
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ADC_CONVST" is stuck at GND
+    Warning (13410): Pin "ADC_SCK" is stuck at GND
+    Warning (13410): Pin "ADC_SDI" is stuck at GND
+    Warning (13410): Pin "AUD_DACDAT" is stuck at GND
+    Warning (13410): Pin "AUD_XCK" is stuck at GND
+    Warning (13410): Pin "HEX2[0]" is stuck at GND
+    Warning (13410): Pin "HEX2[1]" is stuck at GND
+    Warning (13410): Pin "HEX2[2]" is stuck at GND
+    Warning (13410): Pin "HEX2[3]" is stuck at GND
+    Warning (13410): Pin "HEX2[4]" is stuck at GND
+    Warning (13410): Pin "HEX2[5]" is stuck at GND
+    Warning (13410): Pin "HEX2[6]" is stuck at GND
+    Warning (13410): Pin "HEX3[0]" is stuck at GND
+    Warning (13410): Pin "HEX3[1]" is stuck at GND
+    Warning (13410): Pin "HEX3[2]" is stuck at GND
+    Warning (13410): Pin "HEX3[3]" is stuck at GND
+    Warning (13410): Pin "HEX3[4]" is stuck at GND
+    Warning (13410): Pin "HEX3[5]" is stuck at GND
+    Warning (13410): Pin "HEX3[6]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_CLK" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[0]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[1]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[2]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[3]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[4]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[5]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[6]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[7]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[8]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[9]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[10]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[11]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[12]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[13]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[14]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[15]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[16]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[17]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[18]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[19]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[20]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[21]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[22]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_D[23]" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_DE" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_HS" is stuck at GND
+    Warning (13410): Pin "HDMI_TX_VS" is stuck at GND
+    Warning (13410): Pin "HEX0[0]" is stuck at GND
+    Warning (13410): Pin "HEX0[1]" is stuck at GND
+    Warning (13410): Pin "HEX0[2]" is stuck at GND
+    Warning (13410): Pin "HEX0[3]" is stuck at GND
+    Warning (13410): Pin "HEX0[4]" is stuck at GND
+    Warning (13410): Pin "HEX0[5]" is stuck at GND
+    Warning (13410): Pin "HEX0[6]" is stuck at GND
+    Warning (13410): Pin "HEX1[0]" is stuck at GND
+    Warning (13410): Pin "HEX1[1]" is stuck at GND
+    Warning (13410): Pin "HEX1[2]" is stuck at GND
+    Warning (13410): Pin "HEX1[3]" is stuck at GND
+    Warning (13410): Pin "HEX1[4]" is stuck at GND
+    Warning (13410): Pin "HEX1[5]" is stuck at GND
+    Warning (13410): Pin "HEX1[6]" is stuck at GND
+    Warning (13410): Pin "HSMC_CLKOUT0" is stuck at GND
+    Warning (13410): Pin "HSMC_CLKOUT_n[1]" is stuck at GND
+    Warning (13410): Pin "HSMC_CLKOUT_n[2]" is stuck at GND
+    Warning (13410): Pin "HSMC_CLKOUT_p[1]" is stuck at GND
+    Warning (13410): Pin "HSMC_CLKOUT_p[2]" is stuck at GND
+    Warning (13410): Pin "I2C_SCL" is stuck at GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND
+    Warning (13410): Pin "LEDR[1]" is stuck at GND
+    Warning (13410): Pin "LEDR[2]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
+    Warning (13410): Pin "LEDR[4]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[9]" is stuck at GND
+    Warning (13410): Pin "SD_CLK" is stuck at GND
+    Warning (13410): Pin "SRAM_A[0]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[1]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[2]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[3]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[4]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[5]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[6]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[7]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[8]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[9]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[10]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[11]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[12]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[13]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[14]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[15]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[16]" is stuck at GND
+    Warning (13410): Pin "SRAM_A[17]" is stuck at GND
+    Warning (13410): Pin "SRAM_CE_n" is stuck at GND
+    Warning (13410): Pin "SRAM_LB_n" is stuck at GND
+    Warning (13410): Pin "SRAM_OE_n" is stuck at GND
+    Warning (13410): Pin "SRAM_UB_n" is stuck at GND
+    Warning (13410): Pin "SRAM_WE_n" is stuck at GND
+    Warning (13410): Pin "UART_TX" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 27 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ADC_SDO"
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT"
+    Warning (15610): No output dependent on input pin "CLOCK_125_p"
+    Warning (15610): No output dependent on input pin "CLOCK_50_B6A"
+    Warning (15610): No output dependent on input pin "CLOCK_50_B7A"
+    Warning (15610): No output dependent on input pin "CLOCK_50_B8A"
+    Warning (15610): No output dependent on input pin "CPU_RESET_n"
+    Warning (15610): No output dependent on input pin "HDMI_TX_INT"
+    Warning (15610): No output dependent on input pin "HSMC_CLKIN0"
+    Warning (15610): No output dependent on input pin "HSMC_CLKIN_n[1]"
+    Warning (15610): No output dependent on input pin "HSMC_CLKIN_n[2]"
+    Warning (15610): No output dependent on input pin "HSMC_CLKIN_p[1]"
+    Warning (15610): No output dependent on input pin "HSMC_CLKIN_p[2]"
+    Warning (15610): No output dependent on input pin "KEY[0]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "UART_RX"
+Info (21057): Implemented 289 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 29 input pins
+    Info (21059): Implemented 110 output pins
+    Info (21060): Implemented 97 bidirectional pins
+    Info (21061): Implemented 53 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 260 warnings
+    Info: Peak virtual memory: 781 megabytes
+    Info: Processing ended: Mon Jan 23 17:00:41 2017
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
+
+

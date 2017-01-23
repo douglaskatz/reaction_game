@@ -1,0 +1,304 @@
+# Reading E:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# do REACTION_GAME_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying E:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied E:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+E:/altera/15.0/practice_stuff/reaction_game {E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 15:44:49 on Jan 23,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/altera/15.0/practice_stuff/reaction_game" E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv 
+# -- Compiling module REACTION_GAME_MCOUNTER
+# 
+# Top level modules:
+# 	REACTION_GAME_MCOUNTER
+# End time: 15:44:49 on Jan 23,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/altera/15.0/practice_stuff/reaction_game {E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 15:44:49 on Jan 23,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/altera/15.0/practice_stuff/reaction_game" E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv 
+# -- Compiling module REACTION_GAME
+# 
+# Top level modules:
+# 	REACTION_GAME
+# End time: 15:44:49 on Jan 23,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -sv -work work +incdir+E:/altera/15.0/practice_stuff/reaction_game E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 15:44:59 on Jan 23,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/altera/15.0/practice_stuff/reaction_game" E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv 
+# -- Compiling module REACTION_GAME
+# 
+# Top level modules:
+# 	REACTION_GAME
+# End time: 15:44:59 on Jan 23,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.REACTION_GAME
+# vsim -gui "+altera" -l msim_transcript -do "REACTION_GAME_run_msim_rtl_verilog.do" 
+# Start time: 15:45:00 on Jan 23,2017
+# Loading sv_std.std
+# Loading work.REACTION_GAME
+# Loading work.REACTION_GAME_MCOUNTER
+# ** Warning: (vsim-3015) E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv(161): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv(15).
+# 
+#         Region: /REACTION_GAME/usecCounter
+# ** Warning: (vsim-3015) E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv(161): [PCDPC] - Port size (1) does not match connection size (10) for port 'max'. The port definition is at: E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv(19).
+# 
+#         Region: /REACTION_GAME/usecCounter
+# ** Warning: (vsim-3015) E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv(170): [PCDPC] - Port size (1) does not match connection size (10) for port 'en'. The port definition is at: E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv(15).
+# 
+#         Region: /REACTION_GAME/msecCounter
+# ** Warning: (vsim-3015) E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv(170): [PCDPC] - Port size (1) does not match connection size (10) for port 'max'. The port definition is at: E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv(19).
+# 
+#         Region: /REACTION_GAME/msecCounter
+# ** Warning: (vsim-3015) E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv(179): [PCDPC] - Port size (1) does not match connection size (10) for port 'en'. The port definition is at: E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv(15).
+# 
+#         Region: /REACTION_GAME/secCounter
+add wave -position insertpoint  \
+sim:/REACTION_GAME/reset \
+sim:/REACTION_GAME/clk \
+sim:/REACTION_GAME/usecMax \
+sim:/REACTION_GAME/msecMax \
+sim:/REACTION_GAME/msec \
+sim:/REACTION_GAME/sec
+quit -sim
+vlog -sv -work work +incdir+E:/altera/15.0/practice_stuff/reaction_game E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 15:47:01 on Jan 23,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/altera/15.0/practice_stuff/reaction_game" E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv 
+# -- Compiling module REACTION_GAME
+# 
+# Top level modules:
+# 	REACTION_GAME
+# End time: 15:47:01 on Jan 23,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+E:/altera/15.0/practice_stuff/reaction_game E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 15:47:05 on Jan 23,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/altera/15.0/practice_stuff/reaction_game" E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv 
+# -- Compiling module REACTION_GAME_MCOUNTER
+# 
+# Top level modules:
+# 	REACTION_GAME_MCOUNTER
+# End time: 15:47:05 on Jan 23,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.REACTION_GAME
+# vsim 
+# Start time: 15:47:07 on Jan 23,2017
+# Loading sv_std.std
+# Loading work.REACTION_GAME
+# Loading work.REACTION_GAME_MCOUNTER
+# ** Warning: (vsim-3015) E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv(161): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv(15).
+# 
+#         Region: /REACTION_GAME/usecCounter
+add wave -position insertpoint  \
+sim:/REACTION_GAME/reset \
+sim:/REACTION_GAME/clk \
+sim:/REACTION_GAME/usecMax \
+sim:/REACTION_GAME/msecMax \
+sim:/REACTION_GAME/msec \
+sim:/REACTION_GAME/sec
+force -freeze sim:/REACTION_GAME/reset 1 0
+force -freeze sim:/REACTION_GAME/clk 1 0, 0 {50 ps} -r 100
+run
+force -freeze sim:/REACTION_GAME/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint sim:/REACTION_GAME/usecCounter/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+vlog -sv -work work +incdir+E:/altera/15.0/practice_stuff/reaction_game E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 15:56:32 on Jan 23,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/altera/15.0/practice_stuff/reaction_game" E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv 
+# -- Compiling module REACTION_GAME
+# 
+# Top level modules:
+# 	REACTION_GAME
+# End time: 15:56:32 on Jan 23,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+E:/altera/15.0/practice_stuff/reaction_game E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 15:56:32 on Jan 23,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/altera/15.0/practice_stuff/reaction_game" E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv 
+# -- Compiling module REACTION_GAME_MCOUNTER
+# 
+# Top level modules:
+# 	REACTION_GAME_MCOUNTER
+# End time: 15:56:32 on Jan 23,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.REACTION_GAME
+# vsim 
+# Start time: 15:56:33 on Jan 23,2017
+# Loading sv_std.std
+# Loading work.REACTION_GAME
+# Loading work.REACTION_GAME_MCOUNTER
+# ** Warning: (vsim-3015) E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv(162): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv(15).
+# 
+#         Region: /REACTION_GAME/nsecCounter
+add wave -position insertpoint sim:/REACTION_GAME/nsecCounter/*
+add wave -position insertpoint sim:/REACTION_GAME/usecCounter/*
+add wave -position insertpoint sim:/REACTION_GAME/msecCounter/*
+add wave -position insertpoint sim:/REACTION_GAME/secCounter/*
+add wave -position insertpoint  \
+sim:/REACTION_GAME/reset \
+sim:/REACTION_GAME/clk
+force -freeze sim:/REACTION_GAME/reset 0 0
+force -freeze sim:/REACTION_GAME/reset 1 0
+force -freeze sim:/REACTION_GAME/clk 1 0, 0 {2 ps} -r 20
+force -freeze sim:/REACTION_GAME/clk 1 0, 0 {10000 ps} -r {20 ns}
+run
+force -freeze sim:/REACTION_GAME/clk 1 0, 0 {10000 ps} -r {20 ns}
+run
+add wave -position insertpoint sim:/REACTION_GAME/nsecCounter/*
+add wave -position insertpoint sim:/REACTION_GAME/usecCounter/*
+add wave -position insertpoint sim:/REACTION_GAME/msecCounter/*
+add wave -position insertpoint sim:/REACTION_GAME/secCounter/*
+add wave -position insertpoint  \
+sim:/REACTION_GAME/reset \
+sim:/REACTION_GAME/clk
+force -freeze sim:/REACTION_GAME/reset 1 0, 0 {10000 ps} -r 20ns
+force -freeze sim:/REACTION_GAME/clk 1 0, 0 {10000 ps} -r 20ns
+run
+force -freeze sim:/REACTION_GAME/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+run
+restart -f
+# Loading sv_std.std
+# Loading work.REACTION_GAME
+# Loading work.REACTION_GAME_MCOUNTER
+# ** Warning: (vsim-3015) E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv(162): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv(15).
+# 
+#         Region: /REACTION_GAME/nsecCounter
+add wave -position insertpoint  \
+sim:/REACTION_GAME/reset \
+sim:/REACTION_GAME/clk
+add wave -position insertpoint sim:/REACTION_GAME/nsecCounter/*
+add wave -position insertpoint sim:/REACTION_GAME/usecCounter/*
+add wave -position insertpoint sim:/REACTION_GAME/msecCounter/*
+add wave -position insertpoint sim:/REACTION_GAME/secCounter/*
+force -freeze sim:/REACTION_GAME/reset 1 0
+force -freeze sim:/REACTION_GAME/clk 1 0, 0 {10000 ps} -r {20 ns}
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+force -freeze sim:/REACTION_GAME/reset 0 0
+run
+run
+run
+run
+run
+quit -sim
+vlog -sv -work work +incdir+E:/altera/15.0/practice_stuff/reaction_game E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:09:19 on Jan 23,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/altera/15.0/practice_stuff/reaction_game" E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv 
+# -- Compiling module REACTION_GAME
+# 
+# Top level modules:
+# 	REACTION_GAME
+# End time: 16:09:19 on Jan 23,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+E:/altera/15.0/practice_stuff/reaction_game E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:09:19 on Jan 23,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/altera/15.0/practice_stuff/reaction_game" E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv 
+# -- Compiling module REACTION_GAME_MCOUNTER
+# 
+# Top level modules:
+# 	REACTION_GAME_MCOUNTER
+# End time: 16:09:19 on Jan 23,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.REACTION_GAME
+# vsim 
+# Start time: 16:09:23 on Jan 23,2017
+# Loading sv_std.std
+# Loading work.REACTION_GAME
+# Loading work.REACTION_GAME_MCOUNTER
+# ** Warning: (vsim-3015) E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME.sv(162): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: E:/altera/15.0/practice_stuff/reaction_game/REACTION_GAME_MCOUNTER.sv(15).
+# 
+#         Region: /REACTION_GAME/nsecCounter
+add wave -position insertpoint sim:/REACTION_GAME/nsecCounter/*
+add wave -position insertpoint sim:/REACTION_GAME/usecCounter/*
+add wave -position insertpoint sim:/REACTION_GAME/msecCounter/*
+add wave -position insertpoint sim:/REACTION_GAME/secCounter/*
+add wave -position insertpoint  \
+sim:/REACTION_GAME/reset \
+sim:/REACTION_GAME/clk
+force -freeze sim:/REACTION_GAME/reset 1 0
+force -freeze sim:/REACTION_GAME/clk 1 0, 0 {10000 ps} -r {20 ns}
+run
+force -freeze sim:/REACTION_GAME/reset 0 0
+run
+run
+run
+# End time: 16:14:03 on Jan 23,2017, Elapsed time: 0:04:40
+# Errors: 0, Warnings: 1

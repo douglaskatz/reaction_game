@@ -1,0 +1,36 @@
+/*
+ * This module updates a counter every clock cycle and resets when the counter reaches maxCount
+ *
+ */
+module REACTION_TEST_MCOUNTER
+#(
+	// Parameter Declarations
+	parameter maxCount = 16'd1000,       // Maximum value the counter will count to.
+	parameter bitWidth = 5'd16
+)
+(
+	// Input Ports
+	input logic                 reset,
+	input logic                 clk,
+
+	// Output Ports
+	output logic [bitWidth-1:0] count,
+	output logic                max
+);
+	// Module Item(s)
+	always @(posedge clk) begin
+		if(reset) begin
+			count <= 0;
+			max <= 0;
+		end else begin
+			if(count == maxCount) begin
+				count <= 0;
+				max <= 1;
+			end else begin
+				count <= count + 1;
+				max <= 0;
+			end
+		end
+	end
+endmodule
+
