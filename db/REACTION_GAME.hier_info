@@ -156,7 +156,10 @@ HSMC_TX_p[15] <> <UNC>
 HSMC_TX_p[16] <> <UNC>
 I2C_SCL <= <GND>
 I2C_SDA <> <UNC>
-KEY[0] => ~NO_FANOUT~
+KEY[0] => next_state.OUTPUTSELECT
+KEY[0] => next_state.OUTPUTSELECT
+KEY[0] => next_state.OUTPUTSELECT
+KEY[0] => Selector19.IN3
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
 KEY[3] => ~NO_FANOUT~

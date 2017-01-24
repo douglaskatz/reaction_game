@@ -1,0 +1,8 @@
+
+State Machine - |REACTION_GAME|state
+Name state.STATE_RESET state.STATE_FALSE state.STATE_RESULT state.STATE_COUNTUP state.STATE_COUNTDOWN 
+state.STATE_RESET 0 0 0 0 0 
+state.STATE_COUNTDOWN 1 0 0 0 1 
+state.STATE_COUNTUP 1 0 0 1 0 
+state.STATE_RESULT 1 0 1 0 0 
+state.STATE_FALSE 1 1 0 0 0 

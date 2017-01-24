@@ -149,31 +149,36 @@ module REACTION_GAME(
 logic reset;
 logic clk;
 
-logic       usecMax; // 1000 ns reached
-logic       msecMax; // 1000 us reached
-logic       secMax;  // 1000 ms reached
+logic       usecMax;   // 1000 ns reached
+logic       msecMax;   // 1000 us reached
+logic       secMax;    // 1000 ms reached
+logic       tenSecMax; // 10 s reached
 
 logic [9:0] msec; // how many miliseconds have passed
-logic [9:0] sec; // how many seconds have passed
+logic [9:0] sec;  // how many seconds have passed
+
+logic       counterReset; // reset all counters 
+logic       counterEn;    // enables counters
 
 assign clk = CLOCK_50_B5B; // 50 MHz clock
 assign reset = ~SW[0]; // reset button
+assign button = ~KEY[0]; // button press
 
 //-----------------------------------------------------------------------------------
 // Timers:
 // These timers keep track of seconds and milliseconds when en is driven high
 //-----------------------------------------------------------------------------------
 REACTION_GAME_MCOUNTER #(6'd50,3'd6) nsecCounter(
-.reset(reset),
+.reset(reset | counterReset),
 .clk(clk),
-.en(1),
+.en(counterEn),
 
 .count(),
 .max(usecMax)
 );
 
 REACTION_GAME_MCOUNTER usecCounter(
-.reset(reset),
+.reset(reset | counterReset),
 .clk(clk),
 .en(usecMax),
 
@@ -182,7 +187,7 @@ REACTION_GAME_MCOUNTER usecCounter(
 );
 
 REACTION_GAME_MCOUNTER msecCounter(
-.reset(reset),
+.reset(reset | counterReset),
 .clk(clk),
 .en(msecMax),
 
@@ -191,17 +196,153 @@ REACTION_GAME_MCOUNTER msecCounter(
 );
 
 REACTION_GAME_MCOUNTER #(4'd10,3'd4) secCounter(
-.reset(reset),
+.reset(reset | counterReset),
 .clk(clk),
 .en(secMax),
 
 .count(sec),
-.max()
+.max(tenSecMax)
 );
 
 //-----------------------------------------------------------------------------------
 // State Machine
 //-----------------------------------------------------------------------------------
+logic [3:0] secDigit;     // Digit displayed in second slot
+logic       secDigitEn;   // Enables displaying the second digit
+logic [3:0] dsecDigit;    // Digit displayed in decisecond slot
+logic       dsecDigitEn;   // Enables displaying the decisecond digit
+logic [3:0] csecDigit;    // Digit displayed in centisecond slot
+logic       csecDigitEn;   // Enables displaying the centisecond digit
+logic [3:0] msecDigit;    // Digit displayed in millisecond slot
+logic       msecDigitEn;   // Enables displaying the millisecond digit
+
+
+enum int unsigned { STATE_RESET = 0, STATE_COUNTDOWN = 2, STATE_COUNTUP = 4, STATE_RESULT = 8, STATE_FALSE = 16} state, next_state;
+
+// Seven segment display/State machine outputs
+always_comb begin
+	counterReset = 0;
+	counterEn    = 0;
+	case(state)
+		STATE_RESET: begin
+			secDigit    = 4'd0;
+			secDigitEn  = 1;
+			dsecDigit   = 4'd0;
+			dsecDigitEn = 1;
+			csecDigit   = 4'd0;
+			csecDigitEn = 1;
+			msecDigit   = 4'd0;
+			msecDigitEn = 1;
+		end
+		STATE_COUNTDOWN: begin
+			secDigit     = 4'd10 - sec;
+			secDigitEn   = 1;
+			dsecDigit     = 4'd0;
+			dsecDigitEn  = 0;
+			csecDigit     = 4'd0;
+			csecDigitEn  = 0;
+			msecDigit     = 4'd0;
+			msecDigitEn  = 0;
+			counterEn   = 1;
+		end
+		STATE_COUNTUP: begin
+			secDigit    = 4'd0;
+			secDigitEn  = 1;
+			dsecDigit   = 4'd0;
+			dsecDigitEn = 0;
+			csecDigit   = 4'd0;
+			csecDigitEn = 0;
+			msecDigit   = 4'd0;
+			msecDigitEn = 0;
+			counterEn   = 1;
+		end
+		STATE_RESULT: begin
+			secDigit    = sec;
+			secDigitEn  = 1;
+			dsecDigit   = msec / 8'd100;
+			dsecDigitEn = 1;
+			csecDigit   = (msec % 8'd100) / 4'd10;
+			csecDigitEn = 1;
+			msecDigit   = msec % 4'd10;
+			msecDigitEn = 1;
+			counterEn   = 0;
+		end
+		STATE_FALSE: begin
+			secDigit    = 4'hf;
+			secDigitEn  = 1;
+			dsecDigit   = 4'hf;
+			dsecDigitEn = 1;
+			csecDigit   = 4'hf;
+			csecDigitEn = 1;
+			msecDigit   = 4'hf;
+			msecDigitEn = 1;
+		end
+		default: begin
+			secDigit    = 4'd0;
+			secDigitEn  = 1;
+			dsecDigit   = 4'd0;
+			dsecDigitEn = 1;
+			csecDigit   = 4'd0;
+			csecDigitEn = 1;
+			msecDigit   = 4'd0;
+			msecDigitEn = 1;
+			counterReset = 1;
+		end
+	endcase
+end
+
+// State transitions
+always_comb begin
+	case(state)
+		STATE_RESET:begin
+			if(reset)
+				next_state = STATE_RESET;
+			else
+				next_state = STATE_COUNTDOWN;
+		end
+		STATE_COUNTDOWN: begin
+			// if button is pressed too early
+			if(button)
+				next_state = STATE_FALSE;
+			else begin
+				// if ten second countdown has ended
+				if(tenSecMax)
+					next_state = STATE_COUNTUP;
+				else
+					next_state = STATE_COUNTDOWN;
+			end
+		end
+		STATE_COUNTUP: begin
+			// if button is pressed at correct time
+			if(button)
+				next_state = STATE_RESULT;
+			else begin
+				if(tenSecMax) 
+					next_state = STATE_RESULT;
+				else
+					next_state = STATE_COUNTUP;
+			end
+		end
+		// display results or false start until reset
+		STATE_RESULT: begin
+			next_state = STATE_RESULT;
+		end
+		STATE_FALSE: begin
+			next_state = STATE_FALSE;
+		end
+		default:
+			next_state = STATE_RESET;
+	endcase
+end
+	
+
+always_ff@(posedge clk) begin
+	if(reset)
+		state <= STATE_RESET;
+	else
+		state <= next_state;
+end
+
 
 
 //-----------------------------------------------------------------------------------
@@ -210,40 +351,30 @@ REACTION_GAME_MCOUNTER #(4'd10,3'd4) secCounter(
 
 // milliseconds
 REACTION_GAME_DIGIT2HEX d2h0 (
-.digit(4'd1),
-.en(0),
+.digit(msecDigit),
+.en(msecDigitEn),
 .hex(HEX0)
 );
 
 // Centiseconds
 REACTION_GAME_DIGIT2HEX d2h1 (
-.digit(4'd10),
-.en(1),
+.digit(csecDigit),
+.en(csecDigitEn),
 .hex(HEX1)
 );
 
 // Deciseconds
 REACTION_GAME_DIGIT2HEX d2h2 (
-.digit(4'd12),
-.en(1),
+.digit(dsecDigit),
+.en(dsecDigitEn),
 .hex(HEX2)
 );
 
 // Seconds
 REACTION_GAME_DIGIT2HEX d2h3 (
-.digit(4'd1),
-.en(1),
+.digit(secDigit),
+.en(secDigitEn),
 .hex(HEX3)
 );
-
-
-
-always @(posedge clk) begin
-	if(reset) begin
-		
-	end else begin
-
-	end
-end
 
 endmodule
